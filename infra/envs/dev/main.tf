@@ -70,3 +70,4 @@ module "rds" {
   multi_az                = false # dev: single AZ
   tags                    = var.tags
 }
+# CI trigger test
