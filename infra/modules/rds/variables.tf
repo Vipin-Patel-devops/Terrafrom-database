@@ -51,8 +51,8 @@ variable "db_username" {
 }
 
 variable "db_password" {
-  type      = string
-  sensitive = true
+  type        = string
+  sensitive   = true
   description = "Pass via TF_VAR_db_password env var or a secrets manager, never commit in tfvars"
 }
 

@@ -59,10 +59,10 @@ resource "aws_db_instance" "this" {
   # Private: no public IP, and it lives in private subnets only.
   publicly_accessible = false
 
-  backup_retention_period = var.backup_retention_period
-  deletion_protection     = var.deletion_protection
-  multi_az                = var.multi_az
-  skip_final_snapshot     = !var.deletion_protection
+  backup_retention_period   = var.backup_retention_period
+  deletion_protection       = var.deletion_protection
+  multi_az                  = var.multi_az
+  skip_final_snapshot       = !var.deletion_protection
   final_snapshot_identifier = var.deletion_protection ? "${local.name_prefix}-final-snapshot" : null
 
   tags = merge(local.common_tags, { Name = "${local.name_prefix}-db" })

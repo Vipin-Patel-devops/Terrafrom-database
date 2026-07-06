@@ -57,16 +57,16 @@ module "ecs" {
 module "rds" {
   source = "../../modules/rds"
 
-  project_name           = var.project_name
-  environment            = var.environment
-  vpc_id                 = module.network.vpc_id
-  private_subnet_ids     = module.network.private_subnet_ids
-  ecs_security_group_id  = module.ecs.ecs_security_group_id
-  engine                 = var.db_engine
-  instance_class         = var.db_instance_class
-  db_password            = var.db_password
+  project_name            = var.project_name
+  environment             = var.environment
+  vpc_id                  = module.network.vpc_id
+  private_subnet_ids      = module.network.private_subnet_ids
+  ecs_security_group_id   = module.ecs.ecs_security_group_id
+  engine                  = var.db_engine
+  instance_class          = var.db_instance_class
+  db_password             = var.db_password
   backup_retention_period = var.db_backup_retention_period
-  deletion_protection    = var.db_deletion_protection
-  multi_az               = false # dev: single AZ
-  tags                   = var.tags
+  deletion_protection     = var.db_deletion_protection
+  multi_az                = false # dev: single AZ
+  tags                    = var.tags
 }
