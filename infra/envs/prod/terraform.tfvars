@@ -16,6 +16,7 @@ desired_count   = 2
 db_engine                  = "postgres"
 db_instance_class          = "db.r6g.large"
 db_backup_retention_period = 30
+db_password = "SomeStrongPassword123!"
 db_deletion_protection     = true
 
 # db_password intentionally NOT set here — pass via TF_VAR_db_password
