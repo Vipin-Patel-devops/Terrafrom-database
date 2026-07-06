@@ -81,7 +81,7 @@ variable "db_password" {
 # dev: shorter retention
 variable "db_backup_retention_period" {
   type    = number
-  default = 3
+  default = 1
 }
 
 # dev: deletion protection OFF so the env is easy to tear down

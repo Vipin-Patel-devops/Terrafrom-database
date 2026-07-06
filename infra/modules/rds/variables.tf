@@ -27,7 +27,7 @@ variable "engine" {
 
 variable "engine_version" {
   type    = string
-  default = "16.3"
+  default = "16.13"
 }
 
 variable "instance_class" {

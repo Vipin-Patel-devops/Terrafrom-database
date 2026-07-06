@@ -12,11 +12,11 @@ terraform {
   # running `terraform init` against real AWS, or comment this block out
   # and use local state for a first dry-run (`terraform plan` only needs
   # a backend if you actually run `init` against remote state).
-  backend "s3" {
-    bucket         = "REPLACE-ME-terraform-state-dev"
+backend "s3" {
+    bucket         = "hotelbooking-tfstate-dev-88213"
     key            = "hotel-booking/dev/terraform.tfstate"
     region         = "ap-south-1"
-    dynamodb_table = "REPLACE-ME-terraform-locks-dev"
+    dynamodb_table = "hotelbooking-tflocks-dev"
     encrypt        = true
   }
 }

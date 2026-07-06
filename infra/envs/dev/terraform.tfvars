@@ -15,8 +15,9 @@ desired_count   = 1
 
 db_engine                  = "postgres"
 db_instance_class          = "db.t3.micro"
-db_backup_retention_period = 3
+db_backup_retention_period = 1
 db_deletion_protection     = false
+db_password = "SomeStrongPassword123!"
 
 # db_password intentionally NOT set here — pass via TF_VAR_db_password
 # or CI secret. Never commit real secrets to tfvars.
